@@ -6,7 +6,7 @@ class FavoritesController extends GetxController {
   var favorites = RxList<Movie>();
   @override
   void onInit() {
-    GetStorage().erase();
+    // GetStorage().erase();
     List? storedData = GetStorage().read<List>('fav');
 
     if (storedData != null) {

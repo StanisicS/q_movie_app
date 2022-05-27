@@ -26,7 +26,7 @@ class BaseController extends GetxController with StateMixin, ScrollMixin {
 
   @override
   void onInit() async {
-    GetStorage().erase();
+    // GetStorage().erase();
 
     List? storedData = GetStorage().read<List>('pop');
 
