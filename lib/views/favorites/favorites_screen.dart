@@ -143,9 +143,11 @@ class FavoritesScreen extends GetView<FavoritesController> {
                         movieItem: controller.favorites[index],
                         icon: InkWell(
                           onTap: () {
+                            var res = c.movies.firstWhere((element) =>
+                                element == controller.favorites[index]);
+                            // index = index - 1;
+                            res.isFav = false;
                             controller.favorites.removeAt(index);
-                            index = index - 1;
-                            c.movies[index + 1].isFav = false;
                             controller.favorites.refresh();
                           },
                           child: Container(
